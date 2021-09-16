@@ -22,6 +22,11 @@ class Post(models.Model):
         return self.date_publish.strftime('%B %d %Y')
     
     
+    #showing post by order
+    class Meta:
+        ordering = ('-publish',)
+    
+    
     #showing title to the admin panel
     def __str__(self):
         return self.title
