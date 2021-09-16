@@ -17,6 +17,11 @@ class Post(models.Model):
     status = models.CharField(max_length=255, choices=options, default='draft')
     
     
+    #showing only date
+    def datepublished(self):
+        return self.date_publish.strftime('%B %d %Y')
+    
+    
     #showing title to the admin panel
     def __str__(self):
         return self.title
