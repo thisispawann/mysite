@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import Home
+from .views import Blog, FrontEnd
 
 urlpatterns = [
-    path('', Home, name='home')
+    path('', Blog, name='blog'),
+    path('frontendcodes/', FrontEnd, name='frontend'),
 ]

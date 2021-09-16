@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,6 +26,50 @@
     <title>thisispawnn</title>
   </head>
   <body>
+    <main>
+      <div class="logo-back">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="646"
+          viewBox="0 0 88 646"
+          style="width: 65px"
+        >
+          <text
+            id="THISISPAWANN"
+            transform="translate(20) rotate(90)"
+            fill="#adb2c6"
+            font-size="94"
+            font-family="Broadway"
+          >
+            <tspan x="0" y="0">THISISPAWANN</tspan>
+          </text>
+        </svg>
+      </div>
+      <a href="/" class="name_tag"> THISIS<b style="color: red">PAW</b>ANN </a>
+      <div class="header">
+        <div class="header__title-wrap">
+          {% comment %} <a href="/" class="icons fab">Home</a>
+          <a href="#" class="icons fab">Category</a> {% endcomment %}
+          <div class="header__links">
+            <a href="" target="_blank" class="header__link"
+              ><i class="icons fab fa-youtube"></i
+            ></a>
+            <a href="#" class="icons fab fa-github"></a>
+            <a href="#codepenlink" target="_blank" class="header__link"
+              ><i class="icons fab fa-codepen"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </main>
+    {% block body %} {% endblock %}
+    <h3 class="footer">
+      © {% now "Y" %} THISISPAWANN<br />Made with&nbsp;
+      <span class="heart" style="color: red">❤</span> &amp;&nbsp;<a
+        href="https://docs.djangoproject.com"
+        >Django</a
+      >
+    </h3>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
