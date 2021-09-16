@@ -6,7 +6,7 @@ from .models import Post
 #Blog
 def Blog(request):
     
-    all_posts = Post.objects.all() #collected all data from post model
+    all_posts = Post.newmanager.all() #collected all data from post model
     return render(request, 'blog.html', {'posts': all_posts})
 
 #Front end assets 

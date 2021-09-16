@@ -3,6 +3,10 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Post(models.Model):
+
+    class NewManager(models.Manager):
+        def get_queryset(self):
+            return super().get_queryset() .filter(status='published')
     
     options = (
         ('draft', 'Draft'),
@@ -15,6 +19,8 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
     content = models.TextField()
     status = models.CharField(max_length=255, choices=options, default='draft')
+    objects = models.Manager() #default manager
+    newmanager = NewManager() #custom manager
     
     
     #showing only date
