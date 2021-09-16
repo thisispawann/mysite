@@ -4,13 +4,15 @@
   <h1 class="menu__item-h1">
     I design and develop experiences that make people's live easier
   </h1>
+  {% for post in posts %}
   <a href="#0" target="_blank" class="menu__item">
     <span class="menu__item-text"
       ><span class="menu__item-textinner" style="transform: translate(0px, 0px)"
-        ><span>Getting Started with Django</span></span
+        ><span>{{post.title}}</span></span
       ></span
     >
   </a>
+  {% endfor %}
 </nav>
 
 {% endblock%}
