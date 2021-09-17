@@ -1,4 +1,8 @@
-{% extends 'base.html' %} {% load static %} {% block body %}
+{% extends 'base.html' %} {% load static %}
+{% block title %} 
+{{post.title}}
+{% endblock %}
+ {% block body %}
 <a href="#0" class="category">Cate<b style="color: red">go</b>ries</a>
 <nav class="menu" data-scroll-section-inview="">
   <div class="container">
