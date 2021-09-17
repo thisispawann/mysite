@@ -50,7 +50,7 @@ class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=50)
     email = models.EmailField()
-    content = models.TextField()
+    your_comment = models.TextField()
     publish = models.DateTimeField(auto_now_add=True) 
     status = models.BooleanField(default=True)
     

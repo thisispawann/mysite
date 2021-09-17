@@ -15,4 +15,4 @@ class AuthorAdmin(admin.ModelAdmin):
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('post', 'name', 'email', 'publish', 'status')
     list_filter = ('status','publish')
-    search_fields = ('name', 'email', 'content')
+    search_fields = ('name', 'email', 'your_comment')

@@ -5,7 +5,7 @@
 }
 
 :root {
-	font-size: 13px;
+	font-size: 14px;
 }
 
 body {
@@ -25,7 +25,8 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	font-family: 'Raleway', sans-serif;
 	overflow-x: hidden;
-   
+	line-height: 1.7 !important;
+	text-align: justify;
 }
 
 /* css of base html */

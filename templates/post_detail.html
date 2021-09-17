@@ -8,7 +8,7 @@
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-md-8">
-        <div class="col-12">
+        <div class="col-12" style="color:#008cff;">
           <h1>{{post.title}}</h1>
         </div>
         <div class="col-12 pt-5">
@@ -28,7 +28,7 @@
         </h2>
         {% endwith %} 
         {% for comment in comments %} <h6 class="mt-5" style="color:#008cff; font-weight:600">{{ comment.name }}</h6> on {{ comment.publish }}
-        {{ comment.content|linebreaks }}
+        {{ comment.your_comment|linebreaks }}
         {% empty %}
         <p>There are no comments for this post.</p>
         {% endfor %}
