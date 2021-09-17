@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
 from .models import Post
+from .forms import NewCommentForm
 
 # Create your views here.
 
@@ -8,7 +9,32 @@ def Blog(request):
     all_posts = Post.newmanager.all() #collected all data from post model
     return render(request, 'blog.html', {'posts': all_posts})
 
+
+
 #post detail
 def PostDetail(request, post):
-    post = get_object_or_404(Post, slug=post, status='published')
-    return render(request, 'post_detail.html', {'post': post})
+    post = get_object_or_404(Post, slug=post, status='published') 
+    #filtering out publish or not
+    #slug=post is slug name goes to url like blog/slug
+    comments = post.comments.filter(status=True)
+    user_comment = None 
+    
+    if request.method == 'POST':
+        comment_form = NewCommentForm(request.POST)
+        if comment_form.is_valid():
+            user_comment = comment_form.save(commit=False)
+            user_comment.post = post
+            user_comment.save()
+            return HttpResponseRedirect("/" + post.slug)
+    else:
+        comment_form = NewCommentForm()
+    return render(
+        request,
+        "post_detail.html",
+        {
+            "post": post,
+            "comments": user_comment, 
+            "comments":comments,
+            "comment_form" : comment_form,
+        }
+    )
