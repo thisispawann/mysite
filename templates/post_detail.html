@@ -16,22 +16,22 @@
         </div>
          <div class="col-md-12">
         {% comment %} 0 comments {% endcomment %} 
-        {% with comments.count as total_comments %}
-        <h2>
-          {{ total_comments }} comment{{ total_comments|pluralize }}
-        </h2>
-        {% endwith %} 
-        {% for comment in comments %} Comment {{ forloop.counter }} by <b>{{ comment.name }}</b> on {{ comment.publish }}
-        {{ comment.content|linebreaks }}
-        {% empty %}
-        <p>There are no comments for this post.</p>
-        {% endfor %}
-        <h2>Make a new comment</h2>
-        <form method="post" id="myForm">
+        <h2 class="mt-5">Make a new comment</h2>
+        <form method="post" id="myForm" class="mb-5">
           {{ comment_form.as_p}}
           {% csrf_token %}
           <button type="submit" class="btn btn-dark btn-lg btn-block">Post Comment</button>
         </form>
+        {% with comments.count as total_comments %}
+        <h2 style="text-decoration:underline">
+          {{ total_comments }} comment{{ total_comments|pluralize }}
+        </h2>
+        {% endwith %} 
+        {% for comment in comments %} <h6 class="mt-5" style="color:#008cff; font-weight:600">{{ comment.name }}</h6> on {{ comment.publish }}
+        {{ comment.content|linebreaks }}
+        {% empty %}
+        <p>There are no comments for this post.</p>
+        {% endfor %}
       </div>
       </div>
     </div>
