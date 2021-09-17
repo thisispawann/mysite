@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 # Create your models here.
 class Post(models.Model):
@@ -31,6 +32,11 @@ class Post(models.Model):
     #showing post by order
     class Meta:
         ordering = ('-publish',)
+    
+    
+    #Reverse function to go individual posts
+    def get_absolute_url(self):
+        return reverse('PostDetail', args=[self.slug])
     
     
     #showing title to the admin panel

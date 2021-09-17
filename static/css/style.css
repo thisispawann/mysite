@@ -154,7 +154,7 @@ a:focus {
 
 /* css of blog html */
 
-.frontend {  
+.category {  
 	position: fixed;
 	z-index: 2000;
 	top: 25rem;
@@ -177,7 +177,7 @@ a:focus {
 	transition: all 200ms linear;
 }
 
-.frontend:hover {  
+.category:hover {  
 	color: #fff;
 	background-color: #121212;
 }
