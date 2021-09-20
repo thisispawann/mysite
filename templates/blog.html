@@ -1,22 +1,56 @@
-{% extends 'base.html' %} {% load static %}
-{% block title %} 
-thisispawann | blog
-{% endblock %}
-{% block body %}
-<a href="#0" class="category">Cate<b style="color: red">go</b>ries</a>
+{% extends 'base.html' %} {% load static %} {% block title %} thisispawann |blog
+{% endblock %} {% block body %}
+{% comment %} <a href="#0" class="category">Cate<b style="color: red">go</b>ries</a> {% endcomment %}
+<!-- Button trigger modal -->
+    <a
+      type="button"
+      class="btn btn-primary category"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      cate<b style="color: red">go</b>ry
+    </a>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Categories</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="django"><a href="#11">Django</a></div>
+            <div class="react"><a href="#11">React JS</a></div>
+            <div class="frontend">
+              <a href="#11">Front-End Web Development</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 <nav class="menu" data-scroll-section-inview="">
   <h1 class="menu__item-h1">
     I design and develop experiences that make people's live easier
   </h1>
   {% for post in posts %}
   <a href="{{post.get_absolute_url}}" class="text-dark menu__item">
-      <span class="menu__item-text"
-        ><span
-          class="menu__item-textinner"
-          style="transform: translate(0px, 0px)"
-          ><span>{{post.title}}</span></span
-        ></span
-      >
+    <span class="menu__item-text"
+      ><span class="menu__item-textinner" style="transform: translate(0px, 0px)"
+        ><span>{{post.title}}</span></span
+      ></span
+    >
   </a>
   {% endfor %}
 </nav>

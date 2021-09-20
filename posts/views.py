@@ -3,13 +3,10 @@ from .models import Post
 from .forms import NewCommentForm
 
 # Create your views here.
-
 #Blog
 def Blog(request):
     all_posts = Post.newmanager.all() #collected all data from post model
     return render(request, 'blog.html', {'posts': all_posts})
-
-
 
 #post detail
 def PostDetail(request, post):

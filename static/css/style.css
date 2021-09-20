@@ -52,7 +52,6 @@ body {
 	color: #121212;
 	line-height: 40px;
 	height: 44px;
-	border: 2px solid #fff;
 	width: 14rem;
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
@@ -164,7 +163,6 @@ a:focus {
 	color: #121212;
 	line-height: 40px;
 	height: 44px;
-	border: 2px solid #fff;
 	width: 14rem;
 	text-align: center;
     text-transform: uppercase;
@@ -176,11 +174,14 @@ a:focus {
 	transform-origin: right bottom;
 	box-shadow: 0 12px 25px 0 rgba(16, 39, 112,.25);
 	transition: all 200ms linear;
+	border: none !important;
+    border-radius: 0;
 }
 
 .category:hover {  
 	color: #fff;
 	background-color: #121212;
+	border: 2px solid #fff;
 }
 
 .menu {
