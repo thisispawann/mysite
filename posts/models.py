@@ -3,6 +3,14 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 
 # Create your models here.
+#Category model
+class Category(models.Model):
+    name = models.CharField(max_length=255)
+    
+    def __str__(self):
+        return self.name
+
+
 class Post(models.Model):
 
     class NewManager(models.Manager):
@@ -15,10 +23,11 @@ class Post(models.Model):
     )
     
     title = models.CharField(max_length=255)
+    category = models.ForeignKey(Category, on_delete=models.PROTECT, default=1)
     slug = models.SlugField(max_length=255, unique_for_date='publish')
     publish = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
-    content = models.TextField()
+    content = models.TextField(null=True, blank=True)
     status = models.CharField(max_length=255, choices=options, default='draft')
     objects = models.Manager() #default manager
     newmanager = NewManager() #custom manager

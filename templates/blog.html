@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% load static %} {% block title %} thisispawann |blog
 {% endblock %} {% block body %}
-{% comment %} <a href="#0" class="category">Cate<b style="color: red">go</b>ries</a> {% endcomment %}
+
 <!-- Button trigger modal -->
     <a
       type="button"
@@ -8,7 +8,7 @@
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
     >
-      cate<b style="color: red">go</b>ry
+      cate<b style="color: red">go</b>ries
     </a>
 
     <!-- Modal -->
@@ -31,11 +31,9 @@
             ></button>
           </div>
           <div class="modal-body">
-            <div class="django"><a href="#11">Django</a></div>
-            <div class="react"><a href="#11">React JS</a></div>
-            <div class="frontend">
-              <a href="#11">Front-End Web Development</a>
-            </div>
+            {% for category in category_list %}
+                 <a class="dropdown-item" href="/category/{{ category.name}}">{{category.name|title}}</a> 
+                {% endfor %}
           </div>
         </div>
       </div>
