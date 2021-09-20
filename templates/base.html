@@ -66,6 +66,43 @@
         </div>
       </div>
     </main>
+    <!-- Button trigger modal -->
+    <a
+      type="button"
+      class="btn btn-primary category"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      cate<b style="color: red">go</b>ries
+    </a>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel" style="color:#008cff;">Categories</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            {% for category in category_list %}
+                 <a class="dropdown-item" href="/category/{{ category.name}}">{{category.name|title}}</a> 
+                {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
     {% block body %} {% endblock %}
     <h3 class="footer">
       © {% now "Y" %} THISISPAWANN<br />Made with&nbsp;
