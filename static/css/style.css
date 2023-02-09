@@ -17,7 +17,7 @@ body {
 	--color-menu: #2f3542;
 	--color-menu-hover: #ffeba7;
 	color: var(--color-text);
-	background-color: var(--color-bg);
+	background-color: white;
 	--cursor-stroke: #102770;
     --cursor-fill: #102770;
     --cursor-stroke-width: 1px;
@@ -134,7 +134,6 @@ a:focus {
 	color: var(--color-link-hover);
 	outline: none;
 }
-
 .footer {
     position: relative;
     padding-left: 3rem;

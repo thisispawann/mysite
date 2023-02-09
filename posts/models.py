@@ -40,7 +40,7 @@ class Post(models.Model):
     
     #showing post by order
     class Meta:
-        ordering = ('-publish',)
+        ordering = ('publish',) # change to -publish to descending order
     
     
     #Reverse function to go individual posts

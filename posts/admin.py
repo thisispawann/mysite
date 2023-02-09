@@ -1,14 +1,17 @@
 from django.contrib import admin
 from . import models
 
+from django_summernote.admin import SummernoteModelAdmin
+
 # Register your models here.
 # Added meta data to admin area
 @admin.register(models.Post)
-class AuthorAdmin(admin.ModelAdmin):
+class AuthorAdmin(SummernoteModelAdmin):
     list_display = ('title', 'status', 'slug', 'author')
     prepopulated_fields = {
         "slug": ("title",),
     }
+    summernote_fields = ('content',)
 
 #including comment to admin section
 @admin.register(models.Comment)
