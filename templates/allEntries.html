@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% load static %} {% block title %} thisispawann |blog
+{% endblock %} {% block body %}
+
+
+<style>
+    .post {
+      font-family:'Raleway', sans-serif;
+    }
+  
+  </style>
+  
+
+  <nav class="menu" data-scroll-section-inview="">
+    <h1 class="menu__item-h1 post">
+      {% comment %} I design and develop experiences that make people's live easier {% endcomment %}
+      All Posts
+    </h1>
+    {% for post in posts %}
+    <a href="{{post.get_absolute_url}}" class="text-dark menu__item">
+      <span class="menu__item-text"
+        ><span class="menu__item-textinner" style="transform: translate(0px, 0px)"
+          ><span>{{post.title}}</span></span
+        ></span
+      >
+    </a>
+    {% endfor %}
+  </nav>
+      
+
+{% endblock%}

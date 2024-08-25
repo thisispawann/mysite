@@ -29,7 +29,7 @@
     </title>
     <title>thisispawnn</title>
   </head>
-  <body>
+  <body style="background-image: {% static 'my_app/example.jpg' %}" ">
     <main>
       <div class="logo-back">
         <svg
@@ -53,11 +53,16 @@
       <div class="header">
         <div class="header__title-wrap">
           <div class="header__links">
+            <a href="/" style="font-size: 1rem;">Home</a>
+            <a href="{% url 'AllEntries' %}" style="font-size: 1rem;">Blogs</a>
+            <a href="{% url 'Projects' %}" style="font-size: 1rem;">Projects</a>
+            <a href="{% url 'Certificates' %}" style="font-size: 1rem;">Certificates</a>
+            <a href="../static/img/Pawan Kumar Shrestha.pdf" download style="font-size: 1rem;">Resume</a>
             <a href="" target="_blank" class="header__link"
               ><i class="icons fab fa-youtube"></i
             ></a>
-            <a href="#" class="icons fab fa-github"></a>
-            <a href="#codepenlink" target="_blank" class="header__link"
+            <a href="https://github.com/thisispawann" class="icons fab fa-github"></a>
+            <a href="https://codesandbox.io/u/thisispawann" target="_blank" class="header__link"
               ><i class="icons fab fa-codepen"></i
             ></a>
           </div>

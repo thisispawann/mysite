@@ -1,19 +1,39 @@
+<!-- HOME PAGE OF PORTFOLIO -->
 {% extends 'base.html' %} {% load static %} {% block title %} thisispawann |blog
 {% endblock %} {% block body %}
 
+<style>
+  .circular-image-container{
+  border: 2px solid #ccc;
+  border-radius: 47%;
+  overflow: hidden;
+  /* width: 300px; */
+  /* height: 300px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  }
 
-<nav class="menu" data-scroll-section-inview="">
-  <h1 class="menu__item-h1">
-    I design and develop experiences that make people's live easier
-  </h1>
-  {% for post in posts %}
-  <a href="{{post.get_absolute_url}}" class="text-dark menu__item">
-    <span class="menu__item-text"
-      ><span class="menu__item-textinner" style="transform: translate(0px, 0px)"
-        ><span>{{post.title}}</span></span
-      ></span
-    >
-  </a>
-  {% endfor %}
-</nav>
+.circular-image{
+  height: auto;
+  width: 100%;
+  display: block;
+} 
+
+</style>
+
+<div class="container">
+  <div class="row justify-content-center align-items-center" style="height: 100vh;">
+    <div class="col-8 text-center">
+      <p style="font-size: 1.5rem; color: red;"><b>Java Developer | AI Enthusiast | Tech Blogger</b></p> 
+      <p>I design and develop experiences that make people's live easier.</p>   
+    </div>
+    <div class="col-4 d-flex justify-content-center">
+      <div class="circular-image-container">
+        <img class="circular-image" src="{% static 'img/pawann.png' %}" alt="Pawan">
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock%}

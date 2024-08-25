@@ -58,3 +58,15 @@ def category_list(request):
         "category_list": category_list,
     }
     return context
+
+
+def AllEntries(request):
+    all_posts = Post.newmanager.all() #collected all data from post model
+    return render(request, 'allEntries.html', {'posts': all_posts})
+
+def Projects(request):
+    return render(request,'projects.html')
+
+
+def Certificates(request):
+    return render(request,'certificates.html')
