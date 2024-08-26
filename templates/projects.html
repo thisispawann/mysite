@@ -1,10 +1,192 @@
 {% extends 'base.html' %} {% load static %} {% block title %} thisispawann |blog
 {% endblock %} {% block body %}
 
+<style>
+.expense-image {
+  width: 25%;
+}
+.expenset-image {
+  width: 16%;
+  margin-top: 2.5rem;
+}
+.todo-image {
+  width: 10%;
+}
 
-<div>
-    <h1><b>Projects...</b></h1>
+.todo-image1 {
+  margin-top: 7rem;
+}
+
+.todo-app {
+  color: #008cff;
+  margin-top: 1rem;
+}
+
+.todo-span {
+  margin-top: 0rem;
+}
+
+.himalaya {
+  width: 40% !important;
+}
+
+.sumeru {
+  margin-top: 3rem;
+  width: 19%;
+}
+</style>
+<div className="pt-5 mt-5 text-center container-fluid" style="text-align: center; margin-top: 9rem;">
+    <div className="bg-none jumbotron">
+        <h1>Projects</h1>
+    </div>
 </div>
-      
 
+<div className="text-left container">
+    <section>
+        <div class="todo-container mt-5" id="budget">
+            <div class="text-center container">
+            <a to="#" style=text-decoration:none;>
+                    <div class="row">
+                        <div class="col">
+                            <div class="todo">
+                                <img class="expense-image" src="{% static 'img/expense-tracker.png' %}" alt="expense-tracker" /><span>&nbsp;&nbsp;<img class="expenset-image expense-image1" src="{% static 'img/expense.png' %}" alt="expense-tracker" /></span>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="text-center todo-app">Expense Tracker App</h2>
+                </a>
+                <span class="badge bg-dark">JavaScript</span>
+                <span class="badge bg-dark">HTML5</span>
+                <span class="badge bg-dark">CSS3</span>
+                <p class="pt-3 mx-auto">
+                    Budget App, which allows us to track a range of expenses. We can enter incoming and outgoing money and the app can help us to store and track that info.
+                </p>
+                <a class="git" href="https://github.com/thisispawann/Expense-Tracker"><button type="button" class="btn btn-outline-primary">View on GitHub</button></a>
+                <hr class="w-100 mx-auto"/>
+            </div>
+        </div>
+
+        <div class="todo-container mt-5" id="budget">
+            <div class="text-center container">
+            <a to="#" style=text-Decoration:none;>
+                    <div class="row">
+                        <div class="col">
+                            <div class="todo">
+                                <img class="expense-image himalaya" src="{% static 'img/himalaya.jpg' %}" />
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="text-center todo-app">Himalaya Organic Farm</h2>
+                </a>
+                <span class="badge bg-dark">ASP.NET</span>
+                <span class="badge bg-dark">SQL Server</span>
+                <span class="badge bg-dark">Bootstrap</span>
+                <p class="pt-3 mx-auto">
+                Himalaya Organic Farm is a employee management app which is done with CRUD operation. This app allows us to create, update, delete employees record.
+                </p>
+                <a class="git" href="https://github.com/thisispawann/EmployeeManagementSystem"><button type="button" class="btn btn-outline-primary">View on GitHub</button></a>
+                <hr class="w-100 mx-auto"/>
+            </div>
+        </div>
+
+        <div class="todo-container">
+            <div class="text-center container">
+            <a to="#" style=text-decoration:none;>
+                    <div class="row">
+                        <div class="col">
+                            <div class="todo">
+                                <img class="todo-image" src="{% static 'img/todo1.png' %}" alt="todo"/><span>&nbsp;&nbsp;<img class="todo-image todo-image1" src="{% static 'img/todo2.png' %}" alt="todo"/>&nbsp;&nbsp;<img class="todo-image" src="{% static 'img/todo2.png' %}" alt="todo" /></span>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="text-center todo-app">Todo App</h2>
+                </a>
+                <span class="badge bg-dark">django</span>
+                <span class="badge bg-dark">SQLite3</span>
+                <span class="badge bg-dark">HTML5</span>
+                <span class="badge bg-dark">CSS3</span>
+                <p class="pt-3 mx-auto">
+                    Todo App is a app that makes to add tasks, organize them into lists and add due dates.
+                </p>
+                <a class="git" href="https://github.com/thisispawann/todo_app"><button type="button" class="btn btn-outline-primary">View on GitHub</button></a>
+                <hr class="w-100 mx-auto"/>
+            </div>
+        </div> 
+      
+        <div class="todo-container">
+            <div class="text-center container">
+            <a to="#" style=text-decoration:none;>
+                    <div class="row">
+                        <div class="col">
+                            <div class="todo">
+                                <img class="todo-image fitness" src="{% static 'img/sumeru3.png' %}" alt="todo" /><span>&nbsp;&nbsp;<img class="todo-image todo-image1 sumeru" src="{% static 'img/sumeru1.png' %}" alt="todo" /></span>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="text-center todo-app">Sumeru Fitness App</h2>
+                </a>
+                <span class="badge bg-dark">JAVA</span>
+                <span class="badge bg-dark">JSP</span>
+                <span class="badge bg-dark">MySQL</span>
+                <span class="badge bg-dark">HTML5</span>
+                <span class="badge bg-dark">CSS3</span>
+                <span class="badge bg-dark">Bootstrap</span>
+                <p className="pt-3 mx-auto">
+                    Sumeru Fitness App is an Inventory management system for a Fitness Business that sells fitness supplies.
+                </p>
+                <a className="git" href="https://github.com/thisispawann"><button type="button" class="btn btn-outline-primary">View on GitHub</button></a>
+                <hr className="w-100 mx-auto"/>
+            </div>
+        </div> 
+
+        <div class="todo-container mt-5" id="budget">
+            <div class="text-center container">
+            <a to="#" style=text-decoration:none;>
+                    <div class="row">
+                        <div class="col">
+                            <div class="todo">
+                                <img class="expense-image himalaya" src="{% static 'img/vs.jpg' %}" alt="expense-tracker" />
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="text-center todo-app">Graphical Programming Language</h2>
+                </a>
+                <span class="badge bg-dark">c#</span>
+                <span class="badge bg-dark">Factory Design Pattern</span>
+                <span class="badge bg-dark">XML Documentation</span>
+                <p class="pt-3 mx-auto">
+                    Created a simplified programming language to teach basic concepts through graphics. It includes commands for drawing shapes, setting colors, and using loops, variables, and if statements, enabling an interactive way to learn programming fundamentals.
+                </p>
+                <a class="git" href="https://github.com/thisispawann/EmployeeManagementSystem"><button type="button" class="btn btn-outline-primary">View on GitHub</button></a> &nbsp; &nbsp; 
+                <a class="git" href="https://www.youtube.com/watch?v=1paFCmguWyg"><button type="button" class="btn btn-outline-danger">View on YouTube</button></a>
+                <a class="git" href="https://bitbucket.org/thisispawan/graphical-programming/src/master/"><button type="button" class="btn btn-outline-primary">View on Bitbucket</button></a>
+                <hr class="w-100 mx-auto"/>
+            </div>
+        </div>
+
+        <div class="todo-container mt-5" id="budget">
+            <div class="text-center container">
+            <a to="#" style=text-decoration:none;>
+                    <div class="row">
+                        <div class="col">
+                            <div class="todo">
+                                <img class="expense-image himalaya" src="{% static 'img/HeartHome.jpg' %}" alt="expense-tracker" /><span>&nbsp;&nbsp<img class="expense-image himalaya" src="{% static 'img/dataFillUp.PNG' %}" alt="expense-tracker" />
+                                    <br> <br>
+                                    <img class="expense-image himalaya" src="{% static 'img/result.jpg' %}" alt="expense-tracker" />
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="text-center todo-app">Heart Disease Prediction System</h2>
+                </a>
+                <span class="badge bg-dark">Python</span>
+                <span class="badge bg-dark">Django</span>
+                <span class="badge bg-dark">Machine Learning</span>
+                <span class="badge bg-dark">Logistic Regression</span>
+                <p class="pt-3 mx-auto">
+                    Developed a machine learning model to predict heart disease using UCI Machine Learning Repository datasets. This project involved data preprocessing, feature selection, model training, and evaluation to achieve accurate predictions, contributing to better understanding and early detection of heart disease.
+                </p>
+                <a class="git" href="https://github.com/thisispawann/HeartDiseasePrediction"><button type="button" class="btn btn-outline-primary">View on GitHub</button></a> &nbsp; &nbsp; 
+                <hr class="w-100 mx-auto"/>
+            </div>
+        </div>
 {% endblock%}

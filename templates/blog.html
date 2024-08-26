@@ -20,13 +20,61 @@
   display: block;
 } 
 
+
+@media(max-width:640px){
+  .justify-content-center{
+    flex-direction: column-reverse;
+
+  }
+  .image-wrapper{
+    margin-top: 6rem;
+  }
+}
+
+@media only screen and (max-width: 639px){
+  .image-wrapper{
+    margin-top: -3rem;
+  }
+}
+
+@media only screen and (max-width: 495px){
+  .image-wrapper{
+    margin-top: -3rem;
+  }
+}
+
+@media only screen and (max-width: 420px){
+  .image-wrapper{
+    margin-top: -3rem;
+  }
+}
+
+@media only screen and (max-width: 548px){
+  .image-wrapper{
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 394px){
+  .image-wrapper{
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 415px){
+  .image-wrapper{
+    margin-top: -6rem;
+  }
+}
 </style>
 
-<div class="container">
-  <div class="row justify-content-center align-items-center" style="height: 100vh;">
+<div class="container w-100 mx-auto image-wrapper">
+  <div class="row justify-content-center align-items-center " style="height: 100vh;">
     <div class="col-8 text-center">
       <p style="font-size: 1.5rem; color: red;"><b>Java Developer | AI Enthusiast | Tech Blogger</b></p> 
       <p>I design and develop experiences that make people's live easier.</p>   
+      
+      <a href="{% url 'AllEntries' %}" style="font-size: 1rem;"><button type="button" class="btn btn-danger btn-sm">Read My Blogs</button></a>
     </div>
     <div class="col-4 d-flex justify-content-center">
       <div class="circular-image-container">
@@ -35,5 +83,6 @@
     </div>
   </div>
 </div>
+
 
 {% endblock%}
