@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import Blog, PostDetail, CatListView, AllEntries, Projects, Certificates
+from .views import Blog, PostDetail, CatListView, AllEntries, Projects, Certificates, About
 
 urlpatterns = [
     path('', Blog, name='blog'),
+    path('about/', About, name='About'),
     path('allEntries/', AllEntries, name='AllEntries'),
     path('projects/', Projects, name = 'Projects'),
     path('certificates/', Certificates, name = 'Certificates'),

@@ -70,3 +70,6 @@ def Projects(request):
 
 def Certificates(request):
     return render(request,'certificates.html')
+
+def About(request):
+    return render(request, 'about.html')

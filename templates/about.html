@@ -1,0 +1,134 @@
+{% extends 'base.html' %} {% load static %} {% block title %} thisispawann |blog
+{% endblock %} {% block body %}
+
+<style>
+    .circular-image-container{
+    border: 2px solid #ccc;
+    border-radius: 47%;
+    overflow: hidden;
+    /* width: 300px; */
+    /* height: 300px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    }
+  
+  .circular-image{
+    height: auto;
+    width: 100%;
+    display: block;
+  } 
+  
+  
+  @media(max-width:640px){
+    .justify-content-center{
+      flex-direction: column-reverse;
+  
+    }
+    .image-wrapper{
+      margin-top: 6rem;
+    }
+  }
+  
+  @media only screen and (max-width: 639px){
+    .image-wrapper{
+      margin-top: -3rem;
+    }
+  }
+  
+  @media only screen and (max-width: 495px){
+    .image-wrapper{
+      margin-top: -3rem;
+    }
+  }
+  
+  @media only screen and (max-width: 420px){
+    .image-wrapper{
+      margin-top: -3rem;
+    }
+  }
+  
+  @media only screen and (max-width: 548px){
+    .image-wrapper{
+      margin-top: 1rem;
+    }
+  }
+  
+  @media only screen and (max-width: 394px){
+    .image-wrapper{
+      margin-top: 2rem;
+    }
+  }
+  
+  @media only screen and (max-width: 415px){
+    .image-wrapper{
+      margin-top: -6rem;
+    }
+  }
+
+
+  </style>
+  
+  <div class="container w-100 mx-auto image-wrapper">
+    <div class="row justify-content-center align-items-center " style="height: 100vh;">
+      <div class="col-8 text-center">
+        <p>I'm Pawan Kumar Shrestha. I have got 2+ years of web development experience, mainly focusing on back-end with Java/Spring Boot and Python/Django. I'm 
+            all about embracing new challenges and learning opportunities. Let's build something Awesome together!
+        </p>   
+        
+        <a href="../static/img/Pawan Kumar Shrestha.pdf" style="font-size: 1rem;"><button type="button" class="btn btn-danger btn-sm">Read more</button></a>
+      </div>
+      <div class="col-4 d-flex justify-content-center">
+        <div class="circular-image-container">
+          <img class="circular-image" src="{% static 'img/pawann.png' %}" alt="Pawan">
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="w-75 mx-auto"/>
+  <div class="container w-100 mx-auto row text-center">
+    <div class="col-md-4">
+        <img width="70" height="70" src="{% static 'img/graduate-cap.svg' %}" alt="Graduation-Cap" />
+        <div class="md-font ">
+            <h4 class="mt-2 resume-title">Education</h4>
+            <h5 class="text-muted mt-2">April 2018 - January 2021</h5>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <p class="text-left ml-2">
+            <div>
+                <h4 class="mt-2 resume-title">Bachelor in Information Technology</h4>
+                <br><br>
+                <p><img width="40px" src="{% static 'img/tbc.png' %}" alt="BritishCollege" /></p>
+                <p>The British College, Level 6 Top Up , March 2021 -  April 2022</p>
+            </div>
+            <div>
+                <p><img width="40px" src="{% static 'img/ismt.png' %}" alt="ISMTCollege" /></p>
+                <p>International School of Management and Technology, Level 4-5 , January 2018 -  April 2020</p>
+            </div> 
+        </p>                           
+    </div>                      
+</div>
+
+<hr class="w-75 mx-auto"/>
+  <div class="container w-100 mx-auto row text-center">
+    <div class="col-md-4">
+        <img width="70" height="70" src="{% static 'img/career.png' %}" alt="Graduation-Cap" />
+        <div class="md-font ">
+            <h4 class="mt-2 resume-title">Career Journey</h4>
+            <h5 class="text-muted mt-2">2022-2024</h5>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <p class="text-left ml-2">
+            
+            <div>
+                <p><img width="40px" src="{% static 'img/cgt.png' %}" alt="CGT" /></p>
+                <p>Worked as a Full Stack Developer at Mantra IT and Cedar Gate Technologies, where I honed my skills in software developmet, working on numerous web and mobile applications.
+                    This experiece gave me a deep understanding of both front-end and back-end technologies.
+                </p>
+            </div> 
+        </p>                           
+    </div>                      
+</div>
+{% endblock%}
