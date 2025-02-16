@@ -1,6 +1,6 @@
 {
     "git.ignoreLimitWarning": true,
     "editor.fontSize": 12,
-    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "Cascadia Code",
     "files.autoSave": "afterDelay"
 }

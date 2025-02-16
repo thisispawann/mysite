@@ -312,8 +312,6 @@ a:focus {
 	transform: rotate(22.5deg) scale3d(1,1,1);
 }
 
-
-
 @media screen and (min-width: 900px) {
 	.menu {
 		padding: 15vh 0 20vh 0;
@@ -352,6 +350,11 @@ a:focus {
 	.transform-left {
 		transform: translateX(-6px);
 	}
+
+	.mb-5{
+		margin-top: 10rem !important;
+		margin-bottom: -4rem !important;
+	}
     
 }
 
@@ -381,6 +384,7 @@ a:focus {
     .logo-back{
         top: -1rem;
     }
+	
 }
 
 @media screen and (min-width: 900px){

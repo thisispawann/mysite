@@ -3,10 +3,11 @@
 
 <h3
   class="text-center mb-5"
-  style="margin-top: 6rem !important; color: #008cff; font-size: 19px !important; font-weight:800;"
+  style="margin-top: 10rem !important; color: #f80202; font-size: 19px !important; font-weight:800; margin-bottom: -4rem !important;"
 >
   List of {{catlist.cat}} posts
 </h3>
+<nav class="menu" data-scroll-section-inview="">
 {% for post in catlist.posts %}
 <a href="{{post.get_absolute_url}}" class="text-dark menu__item">
   <span class="menu__item-text"
@@ -15,4 +16,8 @@
     ></span
   >
 </a>
-{% endfor %} {% endblock %}
+{% endfor %} 
+</nav>
+
+{% endblock %}
+
